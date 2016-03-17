@@ -1,0 +1,19 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName = "007_Localization_Experiment.controller.Binding">
+	
+	<Button 
+		text="Say Hi!"
+		press = "onSayHi" />
+		
+	<Input
+      value="{/recipient/name}"
+      description="Hello {/recipient/name}"
+      valueLiveUpdate="true"
+      width="60%" />
+	
+	<Text 
+	text = "{path : '/recipient/name', formatter : '.stringFormatter'}" />
+	
+</mvc:View>
